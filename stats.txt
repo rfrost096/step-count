@@ -1,0 +1,7 @@
+Participant	Phone Location	Steps Taken	Walking Begins (index)	Walking Ends (index)	Start (s)	End (s)
+p1.1	Hand held	70	1607	5393	16.07	53.93
+p1.4	Purse	70	2110	5963	21.1	59.63
+p2.2	Hand held	66	1469	5930	14.69	59.3
+p9.2	Pants pocket	70	4774	8525	47.74	85.25
+p11.3	Backpack	76	1603	6709	16.03	67.09
+p27.1	Hand held	68	7325	11053	73.25	110.53
