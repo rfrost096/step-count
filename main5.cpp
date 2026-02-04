@@ -10,6 +10,7 @@
 #include <cstdint>
 #include <chrono>
 #include <algorithm>
+#include <array>
 
 using namespace std;
 
@@ -26,17 +27,6 @@ array<int, 2> intMinMax(map<int, float> floatMap, float accuracy);
 void writeVectorToFile(const vector<vector<int>>& vectorToWrite, const string& filename);
 void writeVectorToFileFloat(const vector<vector<float>>& vectorToWrite, const string& filename);
 bool compareAccuracy(const std::vector<float>& a, const std::vector<float>& b);
-
-
-// const float THRESHOLD = 2;
-// const int MEMORY_SIZE = 512; // Make this a power of 2
-// const int MOVE_MEAN_SIZE = 16; // Make this a power of 2
-// const float SAMPLE_RATE = 100;
-// const float MIN_HERTZ = 1.3;
-// const float MAX_HERTZ = 2.7;
-// const int STEP_BUFFER = 10;
-// const int PEAK_AVERAGE = 3;
-// const int MIN_DELAY = 10;
 
 float THRESHOLD = 13000;
 int MEMORY_SIZE = 512; // Make this a power of 2
@@ -60,14 +50,14 @@ int main()
 	// May need to change depending on environment
 	// String is file path, int is expected step count
 	map<string, int> filePathMap;
-	filePathMap.insert(make_pair("./received.csv", 350));
-    // filePathMap.insert(make_pair("./p1.1_Female_20-29_170-179cm_Hand_held.out.csv", 70));
-	// filePathMap.insert(make_pair("./p1.4_Female_20-29_170-179cm_Handbag.out.csv", 70));
-	// filePathMap.insert(make_pair("./p2.2_Male_20-29_180-189cm_Hand_held.out.csv", 66));
-	// filePathMap.insert(make_pair("./p9.2_Female_15-19_160-169cm_Trousers_back_pocket.out.csv", 70));
-	// filePathMap.insert(make_pair("./p11.3_Male_20-29_170-179cm_Backpack.out.csv", 76));
-	// filePathMap.insert(make_pair("./p27.1_Male_15-19_170-179cm_Hand_held.dat.csv", 68));
-    //filePathMap.insert(make_pair("./100 Steps Josh Data.csv", 125));
+	filePathMap.insert(make_pair("./data/received.csv", 350));
+    filePathMap.insert(make_pair("./data/p1.1_Female_20-29_170-179cm_Hand_held.out.csv", 70));
+	filePathMap.insert(make_pair("./data/p1.4_Female_20-29_170-179cm_Handbag.out.csv", 70));
+	filePathMap.insert(make_pair("./data/p2.2_Male_20-29_180-189cm_Hand_held.out.csv", 66));
+	filePathMap.insert(make_pair("./data/p9.2_Female_15-19_160-169cm_Trousers_back_pocket.out.csv", 70));
+	filePathMap.insert(make_pair("./data/p11.3_Male_20-29_170-179cm_Backpack.out.csv", 76));
+	filePathMap.insert(make_pair("./data/p27.1_Male_15-19_170-179cm_Hand_held.dat.csv", 68));
+    filePathMap.insert(make_pair("./data/100 Steps Josh Data.csv", 125));
 	
 	float accuracy = 0;
 	vector<vector<float>> variables = {};
