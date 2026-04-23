@@ -1,6 +1,6 @@
 # ESP32 Step Counting Algorithm
 
-## Summary for Recruiters
+## Summary
 This project features a high-performance **C++ step-counting algorithm** optimized for the **ESP32 microcontroller**. It processes raw accelerometer data in real-time to track physical activity with high precision.
 
 **Key Highlights:**
@@ -11,7 +11,7 @@ This project features a high-performance **C++ step-counting algorithm** optimiz
 
 ---
 
-## Technical Details for Engineers
+## Technical Details
 
 ### Algorithm Architecture
 The core logic is implemented as a continuous signal processing pipeline and a state machine.
